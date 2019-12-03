@@ -46,13 +46,13 @@ https://api-dev-commercio.leroymerlin.it/api/v1/customer/1_0_0/authentication/lo
 ```
 https://api-dev-commercio.leroymerlin.it/api/v1/customer/1_0_0/profilelight/get/{customerID}
 ```
-**Method**: POST
+**Method**: GET
 
 **Headers**
 ```
 {
 	x-square-api-key: "testToken",
-	x-square-auth-token: authenticationToken
+	x-square-auth-token: authenticationToken,
 	x-square-user-ID: customerID
 }
 ```
