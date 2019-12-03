@@ -1,30 +1,62 @@
 
-## Grafiche
+# Grafiche
 
 Le grafiche sono reperibili da questo [link](https://zpl.io/Vxvl4lR) con le credenziali:
 
 >**username**: tag_ntt_project_work <br>
 >**password**: zeplin123!
 
-## Servizi
+# Servizi
 
-I servizi REST disponibili sono:
+## Store list
+**URL**
+```
+https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/stores.json
+```
+**Method**: GET
 
-- Store lis
->**URL**: https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/stores.json <br>
-> **Method**: GET
-- Wizard config
-> **URL**: https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/wizard_config.json <br>
-> **Method**: GET
-- Login
-> **URL**: https://api-dev-commercio.leroymerlin.it/api/v1/customer/1_0_0/authentication/login <br>
-> **Method**: POST <br>
-> **Headers**: {x-square-api-key: testToken} <br>
-> **Body**: {
+## Wizard config
+**URL**
+```
+https://mctsuite.it.nttdata-emea.com/preview/tag_ntt_project_work/wizard_config.json
+```
+**Method**: GET
+
+## Login
+**URL**
+```
+https://api-dev-commercio.leroymerlin.it/api/v1/customer/1_0_0/authentication/login
+```
+**Method**: POST<br><br>
+**Headers**
+```
+{ x-square-api-key: "testToken" }
+```
+**Body**
+```
+{
 	"username": "tonio.cartonio@authent.it",
 	"password": "Prova123",
 	"rememberMe": false
 }
+```
+## Get profile
+
+**URL**
+```
+https://api-dev-commercio.leroymerlin.it/api/v1/customer/1_0_0/profilelight/get/{customerID}
+```
+**Method**: POST
+
+**Headers**
+```
+{
+	x-square-api-key: "testToken",
+	x-square-auth-token: authenticationToken
+	x-square-user-ID: customerID
+}
+```
+NB: *authenticationToken* e *customerID* da inserire nell'header sono quelli che si ricevono dal servizio di login
 
 -----
 
